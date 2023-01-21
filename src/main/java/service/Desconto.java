@@ -4,7 +4,12 @@ import br.com.assembleia.novaloja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
 
-public interface Desconto {
+public abstract class Desconto {
+    protected Desconto proximo;
 
-    public BigDecimal calculaDesconto(Orcamento orcamento);
+    public Desconto(Desconto proximo) {
+        this.proximo = proximo;
+    }
+    public abstract BigDecimal calculaDescontoAbstrato(Orcamento orcamento);
+
 }
