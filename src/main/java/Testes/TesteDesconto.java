@@ -12,7 +12,9 @@ public class TesteDesconto {
         Orcamento segundo = new Orcamento(new BigDecimal(1000), 1);
 
         CalculadoraDesconto calculadoraDesconto = new CalculadoraDesconto();
-        System.out.printf("%.2f%n", calculadoraDesconto.calculaDesconto(primeiro));
+        System.out.printf("%.2f%n", calculadoraDesconto.calcular(primeiro));
+        System.out.printf("%.2f%n", calculadoraDesconto.calcular(segundo));
+
 
 
 
